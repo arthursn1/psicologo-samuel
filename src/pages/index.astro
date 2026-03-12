@@ -1,24 +1,27 @@
 ---
-// Este bloco é JavaScript. Definimos a variável AQUI para o Astro não dar erro.
+import Layout from '../layouts/Layout.astro';
+import PageRenderer from '../components/PageRenderer.astro';
+
+// Importação das seções (exemplo estático)
+import Hero from '../components/blocks/Hero.astro';
+import Footer from '../components/blocks/Footer.astro';
+
 const PACKAGE_JSON_CONTENT = {
   "name": "psicologo-samuel",
   "version": "0.0.1",
   "description": "Site oficial do Psic\u00f3logo Samuel Alc\u00e2ntara"
 };
 ---
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <title>{PACKAGE_JSON_CONTENT.name}</title>
-</head>
-<body class="bg-[#F9F2EC] text-slate-800 p-10 font-sans">
-    <div class="max-w-2xl mx-auto border border-slate-200 p-8 rounded-2xl bg-white shadow-sm">
-        <h1 class="text-3xl font-bold text-[#0B4491] mb-4">🚀 Site Gerado com Sucesso!</h1>
-        <p class="text-slate-600">O projeto <span class="text-[#D94881] font-mono">"{PACKAGE_JSON_CONTENT.name}"</span> está online.</p>
-        <p class="text-slate-500 mt-2">{PACKAGE_JSON_CONTENT.description}</p>
-        <div class="mt-6 pt-6 border-t border-slate-100 text-sm text-slate-400">
-            Versão do Sistema: {PACKAGE_JSON_CONTENT.version}
+<Layout title={PACKAGE_JSON_CONTENT.name} description={PACKAGE_JSON_CONTENT.description}>
+    <main class="min-h-screen">
+        <div class="max-w-2xl mx-auto border border-slate-200 p-8 rounded-2xl bg-white shadow-sm mt-10">
+            <h1 class="text-3xl font-bold text-[#0B4491] mb-4">🚀 Site Gerado com Sucesso!</h1>
+            <p class="text-slate-600">O projeto <span class="text-[#D94881] font-mono">"{PACKAGE_JSON_CONTENT.name}"</span> está online.</p>
+            <p class="text-slate-500 mt-2">{PACKAGE_JSON_CONTENT.description}</p>
         </div>
-    </div>
-</body>
-</html>
+        
+        <Hero />
+        <PageRenderer />
+        <Footer />
+    </main>
+</Layout>
