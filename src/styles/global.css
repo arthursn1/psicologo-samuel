@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Adicione seus estilos globais customizados aqui */
+html, body {
+  @apply antialiased scroll-smooth;
+}
