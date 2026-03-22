@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Ou a sua branch principal
+    branches: [ main ] # Ou a sua branch principala
 
 permissions:
   contents: read
