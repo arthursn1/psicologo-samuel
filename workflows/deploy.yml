@@ -25,9 +25,6 @@ jobs:
       
       - name: Install, build, and upload your site
         uses: withastro/action@v2
-        # with:
-          # path: . # Mantenha o padrão a menos que seu site esteja numa subpasta
-          # node-version: 20 # Mude se precisar de uma versão específica
 
   deploy:
     needs: build
